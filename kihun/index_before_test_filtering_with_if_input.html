@@ -56,6 +56,17 @@
             }
         }
 
+            function test(event)
+            {
+                console.log(event) ;
+                
+                console.log( "userpress" + event.key ) ;
+
+                document.getElementById("number_from") = Number(document.getElementById("number_from")) ;
+                
+                debugger
+            }
+
 
 
         </script>
@@ -76,7 +87,7 @@
                                 <option value="hexadecimal" id="hexa"> Hexadecimal </option> 
                             </select> 
                         
-                         <input id="number_from" type="text" value=0 ></input>
+                         <input onkeyup="test(event)" id="number_from" type="text" value=0 ></input>
                          
                      </td>
                          <td>
