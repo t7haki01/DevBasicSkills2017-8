@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+        <script>
+        function write_p()
+        {
+            document.getElementById("input_field").value = document.getElementById("input_field").value + "P || Q" ;
+        }
+        function write_q()
+        {
+            document.getElementById("input_field").value = document.getElementById("input_field").value + "P && Q" ;
+        }
+        function write_or()
+        {
+            document.getElementById("input_field").value = document.getElementById("input_field").value + "||" ;
+        }
+        function clear_input()
+        {
+            document.getElementById("input_field").value = " " ;
+        }
+        function write_nega()
+        {
+            document.getElementById("input_field").value = document.getElementById("input_field").value + "!"
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Test for Truth Table</h1>
+        <p><input id="input_field"></p>
+        <table>
+            <tr>
+                <td><button onclick="write_p()" value="P">P &or; Q</button></td>
+                <td><button onclick="write_q()" value="Q">P &and; Q</button></td>
+                <td><button onclick="write_or()" value="OR">&or;</button><!--logical disjunction, html entity--></td>
+                <td><button onclick="clear_input()" value="clear">clear</button><!--clear--></td>
+                <td><button onclick="write_nega()" value="negative">&#172;</button><!--negation,Html decimal, html entity = &not;--></td>
+                <td><button>&#8801;</button><!--temporal will it be generate button--></td>
+            </tr>
+    </table>
+        <p id="test"></p>
+
+        
+            <table align="up" border="1px"><tr>
+                <td>P</td>
+                <td>Q</td>
+                <td>P&or;Q</td>
+            </tr>
+                    <script>
+                        document.write("<tr>");
+                                document.write("<td>" + "true" + "</td>");
+                                document.write("<td>" + "true" + "</td>");
+                                document.write("<td>" + true || true + "</td>");
+                        document.write("</tr>");
+                        document.write("<tr>");
+                                document.write("<td>" + "true" + "</td>");
+                                document.write("<td>" + "false" + "</td>");
+                                document.write("<td>" + true || false + "</td>");
+                        document.write("</tr>");
+                        document.write("<tr>");
+                                document.write("<td>" + "false" + "</td>");
+                                document.write("<td>" + "false" + "</td>");
+                                document.write("<td>" + false || false + "</td>");
+                        document.write("</tr>");
+                    </script></table>
+    
+    <table align="up" border="1px"><tr>
+            <td>P</td>
+            <td>Q</td>
+            <td>P&and;Q</td>
+        </tr>
+                <script>
+                    document.write("<tr>");
+                            document.write("<td>" + "true" + "</td>");
+                            document.write("<td>" + "true" + "</td>");
+                            document.write("<td>" + true && true + "</td>");
+                    document.write("</tr>");
+                    document.write("<tr>");
+                            document.write("<td>" + "true" + "</td>");
+                            document.write("<td>" + "false" + "</td>");
+                            document.write("<td>" + true && false + "</td>");
+                    document.write("</tr>");
+                    document.write("<tr>");
+                            document.write("<td>" + "false" + "</td>");
+                            document.write("<td>" + "false" + "</td>");
+                            document.write("<td>" + false && false + "</td>");
+                    document.write("</tr>");
+                </script></table>
+
+        <script>
+            var x = true ;
+            var y = false ;
+
+            document.getElementById("test").innerHTML = (x  || y )  ;
+        </script>
+    </body>
+</html>

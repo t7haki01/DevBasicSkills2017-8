@@ -1,0 +1,26 @@
+table
+{
+    border-collapse: collapse ;
+    background: white;
+    width: 500px ;
+    height: 400px ;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    overflow: scroll;
+}
+
+td, th 
+{
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+    
+}
+div.scroll
+{
+    background: goldenrod ;
+    width: 600px ;
+    height: 400px ;
+    overflow: scroll;
+}

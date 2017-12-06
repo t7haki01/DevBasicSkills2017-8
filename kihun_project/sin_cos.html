@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    <style>
+    
+    </style>
+    <script>
+    function convert()
+    {
+        var input_user = Number(document.getElementById("input").value) ;
+        var choice = document.getElementById("selection_from").value ;
+        var degree = input_user * Math.PI/180;
+        var result_after = document.getElementById("result") ;
+        if (choice == "sin")
+        {
+            result_after.innerHTML = Math.sin(degree) ;
+        }
+        else if (choice == "cos")
+        {
+            result_after.innerHTML = Math.cos(degree) ;
+        }
+        else if (choice == "tan")
+        {
+            result_after.innerHTML = Math.tan(degree) ;
+        }
+    }
+
+    </script>
+    </head>
+    
+    <body>
+
+        <h1>Sin Cos Tan</h1>
+        <table>
+            <tr>
+                <td>From</td>
+                <td><select id="selection_from">
+                    <option value="sin">Sin</option>
+                    <option value="cos">Cos</option>
+                    <option value="tan">Tan</option></select>
+                </td>
+                <td><input type="number" id="input" value=""> </td>
+                <td><button onclick="convert()">To</button></td>
+                <td id="result"></td>
+            </tr>
+        </table>
+
+    </body>
+</html>
