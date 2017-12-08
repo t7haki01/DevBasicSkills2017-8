@@ -6,7 +6,17 @@
         
         </style>
         <script>
+        function hide()
+        {
+            document.getElementById("side_menu").style.visibility = "hidden" ;
         
+            document.getElementById("show_button").style.visibility = "visible" ;
+        }
+        function show()
+        {
+            document.getElementById("side_menu").style.visibility = "visible" ;
+            document.getElementById("show_button").style.visibility = "hidden" ;
+        }
         </script>
     </head>
     <body>
@@ -15,15 +25,17 @@
             <h1 class="head_line"><a href="combinatorics.html">Combinatorics</a></h1>
         </header>
         <nav>
-                    <div class="side_navigation"><h2>    
+                    <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>                
+                    <div class="side_navigation" id="side_menu"><h2>    
                         <li><a href="index_project.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="number_system_conversions.html">Number system <br>conversions</a></li>
                         <li><a href="number_system_outputs.html">Number system <br>outputs</a></li>
-                        <li><a href="combinatorics.html">Combinatorics</a></li>
+                        <li><a class="active" href="combinatorics.html">Combinatorics</a></li>
                         <li><a href="truth_tables.html">Truth tables </a></li>
                         <li><a href="random_values.html">Random values</a></li>
                         <li><a href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>
+                        <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
                     </h2></div>
         </nav>
         <article><div class="article_sec">

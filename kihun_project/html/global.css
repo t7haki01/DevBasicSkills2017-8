@@ -20,6 +20,25 @@ body
     padding: 5px 5px;
 }
 
+.hide_button
+{
+    float: left;
+    max-width: 160px ;
+    margin: 0;
+    font-size: 10px;
+    padding: 5px 5px;
+}
+
+.show_button
+{
+    visibility: hidden ;
+    float: left;
+    max-width: 160px ;
+    margin: 0;
+    font-size: 10px;
+    padding: 5px 5px;
+}
+
 a
 {
     text-decoration: none; 
@@ -29,12 +48,22 @@ a
 li
 {
     margin-bottom: 20px;
-    border: 1px solid black ;
-    border-radius: 16px;
+    border: 0px solid black ;
+    border-radius: 0px;
     text-align: center;
     padding: 5px;
-    list-style-type: none;
-    
+    list-style-type: none;   
+}
+
+li a.active
+{
+    background: black;
+    color: white;
+}
+li a:hover:not( .active)
+{
+    background-color: grey ;
+    color: white;
 }
 
 .article_sec
@@ -47,16 +76,10 @@ li
     width: 100%;
 }
 
-table
+.button_test
 {
-    margin-top: 60px ;
-    border-collapse:  collapse ;
-    border-style: hidden ;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-table td, table th
-{
-    border: 1px solid black;
-    font-size: 30px;
-    padding: 20px;
-}
