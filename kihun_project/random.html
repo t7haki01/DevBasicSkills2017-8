@@ -12,22 +12,43 @@
             var result_random = document.getElementById("result") ;
             var count_number = document.getElementById("count").value ;
             var random_number = (Math.random()*biggest_number) + smallest_number ; 
-            var repeat_number = random_number.repeat(count_number) ;
             var digit_number_select = document.getElementById("digit").value ;
             var integer_number = parseFloat(random_number).toFixed(0) ;
             var first_number = parseFloat(random_number).toFixed(1) ;
             var second_number = parseFloat(random_number).toFixed(2) ;
+            var i = 0;
             if(digit_number_select == "integer")
             {
-                result_random.innerHTML = repeat_number ;
+                result_random.innerHTML = " " ;
+                while(i<count_number)
+                {
+                i++;
+                var func_a = (Math.random()*biggest_number) + smallest_number ;
+                var func_b = parseFloat(func_a).toFixed(0) ;
+                result_random.innerHTML = result_random.innerHTML + func_b + "<br>" ; 
+                }
             }
             else if(digit_number_select == "first")
             {
-                result_random.innerHTML = first_number ;
+                result_random.innerHTML = " " ;
+                while(i<count_number)
+                {
+                i++;
+                var func_a = (Math.random()*biggest_number) + smallest_number ;
+                var func_b = parseFloat(func_a).toFixed(1) ;
+                result_random.innerHTML = result_random.innerHTML + func_b + "<br>" ; 
+                }
             }
             else
             {
-                result_random.innerHTML = second_number ;
+                result_random.innerHTML = " " ;
+                while(i<count_number)
+                {
+                i++;
+                var func_a = (Math.random()*biggest_number) + smallest_number ;
+                var func_b = parseFloat(func_a).toFixed(2) ;
+                result_random.innerHTML = result_random.innerHTML + func_b + "<br>" ; 
+                }
             }
              
         }
