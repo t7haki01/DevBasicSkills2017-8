@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="global.css" type="text/css">
+        <link rel="stylesheet" href="css/global.css" type="text/css">
         <style>
-        
+        table
+        {
+            margin: auto;
+        }
         </style>
-        <script>
-        function hide()
-        {
-            document.getElementById("side_menu").style.visibility = "hidden" ;
+        <script type="text/javascript" src="javascript/global.js"></script>
+        <script type="text/javascript" src="javascript/trigonometric.js"></script>
         
-            document.getElementById("show_button").style.visibility = "visible" ;
-        }
-        function show()
-        {
-            document.getElementById("side_menu").style.visibility = "visible" ;
-            document.getElementById("show_button").style.visibility = "hidden" ;
-        }
-        </script>
     </head>
     <body>
         <div class="container">
         <header>
-            <h1 class="head_line"><a href="trigonometric_function_values.html">Trigonometric Function Values</a></h1>
+                <div class="logo2">
+                    <a href="index_project.html">
+                     <img src="image/math_logo.png" width="38px" align="absbottom">MathProject
+                    </a></div>
+            <div><h1 class="head_line"><a href="trigonometric_function_values.html">Trigonometric Function Values</a></h1></div>
         </header>
         <nav>
                     <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>                
@@ -51,7 +48,22 @@
                 Text here, here will come some explanation<br>
                 Text here, here will come some explanation<br>
                 Text here, here will come some explanation<br>
-                Text here, here will come some explanation<br>         
+                Text here, here will come some explanation<br>
+            
+                <table>
+                    <tr>
+                        <td><select id="selection_value">
+                            <option value="sin">Sin</option>
+                            <option value="cos">Cos</option>
+                            <option value="tan">Tan</option>    
+                        </select></td>
+                        <td><input type="number" id="input_box" value="0"></td>
+                        <td><button onclick="convert()">=</button></td>
+                        <td id="result"></td>
+                    </tr>
+                </table>
+                
+
             </div></article>
     </div>
     </body>

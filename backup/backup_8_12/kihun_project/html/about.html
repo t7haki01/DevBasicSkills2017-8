@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/global.css" type="text/css">
+        <link rel="stylesheet" href="global.css" type="text/css">
         <style>
         
         </style>
@@ -9,7 +9,6 @@
         function hide()
         {
             document.getElementById("side_menu").style.visibility = "hidden" ;
-        
             document.getElementById("show_button").style.visibility = "visible" ;
         }
         function show()
@@ -22,24 +21,20 @@
     <body>
         <div class="container">
         <header>
-            <div class="logo"><a href="index_project.html">
-                <span style="color:blue">M</span><span style="color:red">a</span><span style="color:yellow">t</span><span style="color:blue">h </span>
-                <span style="color:blue">P</span><span style="color:red">r</span><span style="color:yellow">o</span><span style="color:blue">j</span><span style="color:green">e</span><span style="color:red">c</span><span style="color:blue">t</span>
-            </a></div>
-            <div><h1 class="head_line"><a href="truth_tables.html">Truth Tables</a></h1></div>
+            <h1 class="head_line"><a href="about.html">About</a></h1>
         </header>
         <nav>
-                    <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>                
+                <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>
                     <div class="side_navigation" id="side_menu"><h2>    
                         <li><a href="index_project.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a class="active" href="about.html">About</a></li>
                         <li><a href="number_system_conversions.html">Number system <br>conversions</a></li>
                         <li><a href="number_system_outputs.html">Number system <br>outputs</a></li>
                         <li><a href="combinatorics.html">Combinatorics</a></li>
-                        <li><a class="active" href="truth_tables.html">Truth tables </a></li>
+                        <li><a href="truth_tables.html">Truth tables </a></li>
                         <li><a href="random_values.html">Random values</a></li>
                         <li><a href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>
-                        <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
+                        <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>
                     </h2></div>
         </nav>
         <article><div class="article_sec">
@@ -55,7 +50,8 @@
                 Text here, here will come some explanation<br>
                 Text here, here will come some explanation<br>
                 Text here, here will come some explanation<br>
-                Text here, here will come some explanation<br>         
+                Text here, here will come some explanation<br>
+                
             </div></article>
     </div>
     </body>

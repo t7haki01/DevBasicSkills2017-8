@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href=basic.css type="text/css">
+        <link rel="stylesheet" href=table.css type="text/css">
+        <title>TEST for javascript function2</title>
+
+
+
+        <script>
+        function hide()
+        {
+            document.getElementById("chart_table").style.visibility = "hidden" ;
+        }
+        function show()
+        {
+            document.getElementById("chart_table").style.visibility = "visible" ;
+        }
+        </script>
+    </head>
+    <body>
+
+        <h1>Number_system_chart</h1>
+        
+        <p id="tet"> </p>
+        
+        <p>
+                <button onclick="show()">Show</button>
+                <button onclick="hide()">Hide</button>
+        </p>
+        <div class="scroll">
+        <table id="chart_table">
+            <tr>
+                <th>Decimal</th>
+                <th>Binary</th>
+                <th>Octal</th>
+                <th>Hexaldecimal</th>
+            </tr>
+            <script id="chart_script">    
+            for ( i = 0 ; i < 51 ; i++ )
+                {
+                    document.write("<tr>") ;
+                
+                    document.write("<td>" + i + "</td>" ) ;
+                    document.write("<td>" + Number(i).toString(2) + "</td>")
+                    document.write("<td>" + Number(i).toString(8) + "</td>")
+                    document.write("<td>" + Number(i).toString(16) + "</td>")
+                
+                    document.write(  "</tr>") ;
+                }
+            </script>
+        </table>
+    </div>
+    </body>
+</html>
