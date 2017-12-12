@@ -118,3 +118,15 @@ li a:hover:not( .active)
     color:#1DA1F2 ; 
 }
 
+.truth_table_css
+{
+    margin-top: 10px ;
+    border-collapse:  collapse ;
+    border-style: hidden ;
+    text-align: center ;
+}
+.truth_table_css td, .truth_table_css th
+{
+    border: 1px solid black;
+    padding: 5px;
+}
