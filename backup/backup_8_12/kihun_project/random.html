@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        </style>
+        <script>
+        function random()
+        {
+            var smallest_number = document.getElementById("min_value").value ;
+            var biggest_number = document.getElementById("max_value").value ;
+            var result_random = document.getElementById("result") ;
+            var count_number = document.getElementById("count").value ;
+            var random_number = (Math.random()*biggest_number) + smallest_number ; 
+            var digit_number_select = document.getElementById("digit").value ;
+            var integer_number = parseFloat(random_number).toFixed(0) ;
+            var first_number = parseFloat(random_number).toFixed(1) ;
+            var second_number = parseFloat(random_number).toFixed(2) ;
+            var i = 0;
+            if(digit_number_select == "integer")
+            {
+                result_random.innerHTML = " " ;
+                while(i<count_number)
+                {
+                i++;
+                var func_a = (Math.random()*biggest_number) + smallest_number ;
+                var func_b = parseFloat(func_a).toFixed(0) ;
+                result_random.innerHTML = result_random.innerHTML + func_b + "<br>" ; 
+                }
+            }
+            else if(digit_number_select == "first")
+            {
+                result_random.innerHTML = " " ;
+                while(i<count_number)
+                {
+                i++;
+                var func_a = (Math.random()*biggest_number) + smallest_number ;
+                var func_b = parseFloat(func_a).toFixed(1) ;
+                result_random.innerHTML = result_random.innerHTML + func_b + "<br>" ; 
+                }
+            }
+            else
+            {
+                result_random.innerHTML = " " ;
+                while(i<count_number)
+                {
+                i++;
+                var func_a = (Math.random()*biggest_number) + smallest_number ;
+                var func_b = parseFloat(func_a).toFixed(2) ;
+                result_random.innerHTML = result_random.innerHTML + func_b + "<br>" ; 
+                }
+            }
+             
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Random_value</h1>
+        <table>
+            <tr>
+                <td>Between</td>
+                <td><input type="number" min="0" max="100" id="min_value"></td>
+                    <td>and</td>
+                    <td><input type="number" min="0" max="100" id="max_value"></td>
+                    <td>How many?</td>
+                    <td><input type="number" min="0" max="100" id="count">
+                        </select></td>
+                        <td>Decimals</td>
+                        <td><select id="digit">
+                                <option value="integer">1</option>
+                                <option value="first">0.1</option>
+                                <option value="second">0.01</option>
+                            </select></td>
+            </tr>
+            <tr><td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button onclick="random()">Generate</button></td>
+                <td></td>
+                <td></td>
+                <td></td></tr>
+                <tr><td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="result"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td></tr>
+        </table>
+    </body>
+</html>

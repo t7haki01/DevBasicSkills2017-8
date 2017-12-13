@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="global.css" type="text/css">
+        <style>
+        table
+        {
+            margin: 0px auto;
+            border-collapse: collapse;
+            background: white;
+            table-layout: auto;
+        }
+        td, th
+        {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+        </style>
+        <script type="text/javascript" src="global.js"></script>
+        <script>
+        function hide_table()
+        {
+        document.getElementById("output_table").style.visibility = "hidden" ;
+        }
+        function show_table()
+        {
+        document.getElementById("output_table").style.visibility = "visible" ;
+        }
+        function remove_table()
+        {
+            document.getElementById("output_table").deleteRow(1);
+        }
+        function clear_table()
+        {
+        var cell_row_elements = document.getElementById("output_table").rows.cells;
+        cell_row_elements.innerHTML = "0" ;
+        }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <h1 class="head_line"><a href="number_system_outputs.html">Number System Outputs</a></h1>
+        </header>
+        <nav>
+                    <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>                
+                    <div class="side_navigation" id="side_menu"><h2>    
+                        <li><a href="index_project.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="number_system_conversions.html">Number system <br>conversions</a></li>
+                        <li><a class="active" href="number_system_outputs.html">Number system <br>outputs</a></li>
+                        <li><a href="combinatorics.html">Combinatorics</a></li>
+                        <li><a href="truth_tables.html">Truth tables </a></li>
+                        <li><a href="random_values.html">Random values</a></li>
+                        <li><a href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>
+                        <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
+                    </h2></div>
+        </nav>
+        <article>
+        <div class="article_sec">
+               aaa Text here, here will come some explanation
+                Text here, here will come some explanation
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>         
+        </div>
+        <div class="button_test">
+            <button onclick="show_table()">Show</button>
+            <button onclick="hide_table()">Hide</button>
+            <button onclick="remove_table()">Remove</button>
+            <button onclick="clear_table()">Clear</button>
+        </div>
+            <div><table id="output_table">
+                <tr>
+                    <th>Decimal</th>
+                    <th>Binary</th>
+                    <th>Octal</th>
+                    <th>Hexadecimal</th>
+                </tr>
+                <form id="output_table_for"><script>
+                for( i=0; i<51; i++)
+                {
+                    document.write("<tr>") ;
+                    document.write("<td>" + i + "</td>") ;
+                    document.write("<td>" + i.toString(2) + "</td>") ;
+                    document.write("<td>" + i.toString(8) + "</td>") ;
+                    document.write("<td>" + i.toString(16) + "</td>") ;
+                    document.write("</tr>") ;
+                }
+                </script></form>
+                </table></div>
+        </article></div>
+    </body>
+</html>

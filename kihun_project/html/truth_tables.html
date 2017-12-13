@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/global.css" type="text/css">
+        <style>
+        table
+        {
+            margin: auto;
+            padding: 5px;
+        }
+        table td
+        {
+            padding: 5px;
+        }
+        </style>
+        <script type="text/javascript" src="javascript/global.js"></script>
+        <script type="text/javascript" src="javascript/truth_table.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <div class="logo"><a href="index_project.html">
+                <span style="color:blue">M</span><span style="color:red">a</span><span style="color:yellow">t</span><span style="color:blue">h </span>
+                <span style="color:blue">P</span><span style="color:red">r</span><span style="color:yellow">o</span><span style="color:blue">j</span><span style="color:green">e</span><span style="color:red">c</span><span style="color:blue">t</span>
+            </a></div>
+            <div><h1 class="head_line"><a href="truth_tables.html">Truth Tables</a></h1></div>
+        </header>
+        <nav>
+                    <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>                
+                    <div class="side_navigation" id="side_menu"><h2>    
+                        <li><a href="index_project.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="number_system_conversions.html">Number system <br>conversions</a></li>
+                        <li><a href="number_system_outputs.html">Number system <br>outputs</a></li>
+                        <li><a href="combinatorics.html">Combinatorics</a></li>
+                        <li><a class="active" href="truth_tables.html">Truth tables </a></li>
+                        <li><a href="random_values.html">Random values</a></li>
+                        <li><a href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>
+                        <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
+                    </h2></div>
+        </nav>
+        <article><div class="article_sec">
+               aaa Text here, here will come some explanation
+                Text here, here will come some explanation
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>         
+            </div></article>
+            <table>
+                <tr>
+                    <td>With 1, 0</td>
+                    <td><button type="button" id="pq_and" onclick="truth_table(this)"> P &and; Q </button></td>
+                    <td><button type="button" id="pq_or" onclick="truth_table(this)"> P &or; Q </button></td>
+                    <td><button type="button" id="pqr_and" onclick="truth_table(this)"> P &and; Q &and; R </button></td>
+                    <td><button type="button" id="pqr_or" onclick="truth_table(this)"> P &or; Q &or; R </button></td>
+                    <td><button type="button" id="pqr_and_or" onclick="truth_table(this)"> P &and; Q &or; R </button></td>
+                    <td rowspan="2"><button type="button" id="clear" onclick="remove_table()"> Clear </button></td>    
+                </tr>
+                <tr>
+                        <td>With true, false</td>
+                        <td><button type="button" id="qp_and" onclick="truth_table_tf(this)"> Q &and; P </button></td>
+                        <td><button type="button" id="qp_or" onclick="truth_table_tf(this)"> Q &or; P </button></td>
+                        <td><button type="button" id="rqp_and" onclick="truth_table_tf(this)"> R &and; Q &and; P </button></td>
+                        <td><button type="button" id="rqp_or" onclick="truth_table_tf(this)"> R &or; Q &or; P </button></td>
+                        <td><button type="button" id="pqr_or_and" onclick="truth_table_tf(this)"> P &or; Q &and; R </button></td>
+                </tr>
+                <tr><td colspan="7"><table id="truth_table" class="truth_table_css">
+                <tr></tr>
+            </table></td></tr>
+            </table>
+    </div>
+    </body>
+</html>
