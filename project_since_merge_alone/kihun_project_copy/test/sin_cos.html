@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    <style>
+    
+    </style>
+    <script>
+    function convert()
+    {
+        var input_user = Number(document.getElementById("input").value) ;
+        var choice = document.getElementById("selection_from").value ;
+        var degree = input_user * Math.PI/180;
+        var test1 = parseFloat(degree);
+        var test2 = degree.toFixed(4);
+        var result_after = document.getElementById("result") ;
+        var result_test = document.getElementById("test") ;
+        if (choice == "sin")
+        {
+            
+            debugger
+            result_test.innerHTML = Math.sin(test1) ;
+            debugger
+            result_after.innerHTML = (Math.sin(test2)).toFixed(4) ;
+            
+        }
+        else if (choice == "cos")
+        {
+            result_after.innerHTML = Math.cos(rounded_degree) ;
+        }
+        else if (choice == "tan")
+        {
+            result_after.innerHTML = Math.tan(rounded_degree) ;
+        }
+    }
+
+    </script>
+    </head>
+    
+    <body>
+
+        <h1>Sin Cos Tan</h1>
+        <table>
+            <tr>
+                <td>From</td>
+                <td><select id="selection_from">
+                    <option value="sin">Sin</option>
+                    <option value="cos">Cos</option>
+                    <option value="tan">Tan</option></select>
+                </td>
+                <td><input type="number" id="input" value=""> </td>
+                <td><button onclick="convert()">To</button></td>
+                <td id="result"></td>
+            </tr>
+            <tr>
+                <td id="test"></td>
+            </tr>
+        </table>
+
+    </body>
+</html>

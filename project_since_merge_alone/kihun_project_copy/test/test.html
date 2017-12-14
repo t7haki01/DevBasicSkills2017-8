@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        </style>
+        <script>
+        function test1()
+        {
+            if(document.getElementById("select").value == "2")
+            {
+                var test1 = document.createElement("INPUT");
+                test1.setAttribute("type", "text");
+                test1.setAttribute("value", "0B");
+                document.body.appendChild(test1);
+                
+                
+            }
+            if(document.getElementById("select").value == "3")
+            {
+
+                var test2 = document.createElement("INPUT");
+                test2.setAttribute("type", "text");
+                test2.setAttribute("value", "0X");
+                document.body.appendChild(test2);
+                document.body.replaceChild(test2, INPUT)
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Test</h1>
+        <select onchange="test1()" id="select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </body>
+</html>
