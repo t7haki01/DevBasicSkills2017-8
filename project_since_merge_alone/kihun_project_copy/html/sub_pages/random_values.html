@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Project - Math tools - Random_Values</title>
+        <link rel="stylesheet" href="css/global.css" type="text/css">
+        <link rel="stylesheet" href="css/google_like.css" type="text/css">
+        <style>
+        table
+        {
+            margin: auto;
+            padding: 2px 5px 2px;
+        }
+
+        .table_for_trim 
+        {
+            border-collapse: collapse;
+            border: 1px solid gray;
+        }
+
+        .table_for_trim th
+        {
+            vertical-align: top;
+            height: 40px;
+            padding: 7px;
+        }
+
+        .table_for_trim td
+        {
+            padding: 2px 10px 0px;
+        }
+
+        input
+        {
+            resize: horizontal ;
+            width: 40px;
+        }
+        input:focus
+        {
+            min-width: 50px;
+        }
+        </style>
+        <script type="text/javascript" src="javascript/global.js"></script>
+        <script type="text/javascript" src="javascript/random.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+                <div class="logo"><a href="../index.html">
+                        <span style="color:#4885ed">M</span><span style="color:#db3236">a</span><span style="color:#f4c20d">t</span><span style="color:#4885ed">h </span>
+                        <span style="color:#4885ed">P</span><span style="color:#db3236">r</span><span style="color:#f4c20d">o</span><span style="color:#4885ed">j</span><span style="color:#3cba54">e</span><span style="color:#db3236">c</span><span style="color:#4885ed">t</span>
+                </a></div>
+            <div><h1 class="head_line"><a href="random_values.html">Random Values</a></h1></div>
+        </header>
+        <nav>
+                    <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>                
+                    <div class="side_navigation" id="side_menu"><h2>    
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="number_system_conversions.html">Number system <br>conversions</a></li>
+                        <li><a href="number_system_outputs.html">Number system <br>outputs</a></li>
+                        <li><a href="combinatorics.html">Combinatorics</a></li>
+                        <li><a href="truth_tables.html">Truth tables </a></li>
+                        <li><a class="active" href="random_values.html">Random values</a></li>
+                        <li><a href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>
+                        <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
+                    </h2></div>
+        </nav>
+        <article>                
+            <div align="center"><div class="text_random">
+            In this page, math tool <b>Random values</b> for creating number of random numbers in different decimal.<br>
+            <br><b>< Instruction ></b><br>
+            1. Choose if you want to get numbers with repetition or not, in order or not<br>
+            2. Set the range from which number to number you want to get random number<br>
+            <span style="color:red">&#9888;</span> <span style="color:red">Left input box is for most the smallest and right input box is for the most biggest</span><br>
+            3. Write the number how many you want to get random numbers<br>
+            4. Set the decimal points which decimals points of random number you want
+        </div></div>                      
+            
+            <table>
+            <tr>
+                    <td>
+                            <table class="table_for_trim">
+                                <tr><td><b>Arrange in order</b></td></tr>
+                                
+                                <tr>
+                                    <th align="center">
+                                            <select id="sort_number">
+                                                    <option value="no_sort">No</option>
+                                                    <option value="yes_sort">Yes</option>    
+                                            </select>
+                                    </th>
+                                </tr>
+                            </table>
+                        </td>
+
+                <td>
+                    <table class="table_for_trim">
+                        <tr><td><b>Repetition</b></td></tr>
+                        
+                        <tr>
+                            <th align="center">
+                                    <select id="repeat_select">
+                                            <option value="no_repeat">No</option>
+                                            <option value="yes_repeat">Yes</option>    
+                                    </select>
+                            </th>
+                        </tr>
+                    </table>
+                </td>
+                    <td><table frame="box">
+                            <tr>
+                                <th colspan="2">Range</th></tr>
+                            <tr>
+                                <td>From <input onkeydown="" type="number" id="min_number" value="0"></td>    
+                                <td>to <input type="number" id="max_number" value="0"></td>
+                            </tr>
+                            <tr><td>(Smallest)</td><td>(Biggest)</td></tr>
+                    </table></td>
+
+                    <td><table frame="box">
+                        <tr><th>Number</th></tr>
+                        <tr><td align="center"><input type="number" id="how_many" value="0"></td></tr>
+                        <tr><td>How many?</td></tr>
+                    </table></td>
+
+                    <td><table frame="box">
+                        <tr><th>Decimal point</th></tr>
+                        <tr><td align="center"><select id="decimals">
+                            <option value="integer">1</option>
+                            <option value="decimal_first">0.1</option>
+                            <option value="decimal_second">0.01</option>    
+                        </select></td></tr>
+                        <tr><td>Until hundredths place value</td></tr>    
+                    </table></td>
+                    <td><table><tr><td><button onclick="random()">Generate</button></td></tr></table></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2" id="result_number"></td>
+            </tr>
+        </table>
+            </article>
+    </div>
+    </body>
+</html>

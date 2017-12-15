@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Project - Math tools - Trigonometric_Functions_Values</title>
+        <link rel="stylesheet" href="css/global.css" type="text/css">
+        <style>
+        table
+        {
+            margin: auto;
+        }
+        .text_index
+        {
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif ;
+            line-height: 170% ;    
+            text-align: left;
+            max-width: 800px;
+        }
+        nav
+        {
+            max-width: 160px;
+        }
+        article
+        {
+            max-width: 800px;
+            float: center;
+            margin: auto;
+        }
+
+        </style>
+        <script type="text/javascript" src="javascript/global.js"></script>
+        <script type="text/javascript" src="javascript/trigonometric.js"></script>
+        
+    </head>
+    <body>
+        <header><div class="header_youtube">
+            
+                <div class="logo2">
+                        <button id="show_button" class="show_button_youtube" onclick="show_youtube()"><img src="image/youtube_button.png"></button>
+                    <a href="../index.html">
+                     <img src="image/math_logo.png" width="38px" align="absbottom"> MathProject<br>
+                    </a>
+                </div>
+            
+            <div class="head_line_youtube"><a href="trigonometric_function_values.html"><b>Trigonometric Function Values</b></a>
+            </div>
+        </div></header>
+        <nav>                
+            <div class="side_navigation_youtube" id="side_menu"><h2>    
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="number_system_conversions.html">Number system <br>conversions</a></li>
+                <li><a href="number_system_outputs.html">Number system <br>outputs</a></li>
+                <li><a href="combinatorics.html">Combinatorics</a></li>
+                <li><a href="truth_tables.html">Truth tables </a></li>
+                <li><a href="random_values.html">Random values</a></li>
+                <li><a class="active" href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>                        
+            </h2></div>
+        </nav>
+        <article>
+                <div align="center"><div class="text_index">
+                    <iframe width="600" height="345" src="https://www.youtube.com/embed/NO4H4YROdqk" frameborder="0" allowfullscreen></iframe>
+                    <br><b>Trigonometric function values</b> for checking Sin, Cos, Tan degrees in numeric values.<br>
+                    <span style="color: gray">1,132,331 views</span><br>
+                    <table align="left">
+                            <tr><td><img  src="image/oamk_logo.png" width="60px" align="left"></td>
+                                <br><td><b>< Instruction ></b> <br><span style="color:gray">Published on Dec 14, 2017</span> <br>
+                            1. Choose the which value you want to get<br>2. Put the <b>"Degree"</b> which you want to get <br>
+                            3. Click the <b>" = "</b> button
+                        </tr></td></table>
+                </div></div>                
+                
+                <table align="left">
+                    <tr>
+                        <td><select id="selection_value">
+                            <option value="sin">Sin</option>
+                            <option value="cos">Cos</option>
+                            <option value="tan">Tan</option>    
+                        </select></td>
+                        <td><input type="number" id="input_box" value="0"></td>
+                        <td><button onclick="convert()">=</button></td>
+                        <td id="result"></td>
+                    </tr>
+                </table><br><br>
+                <span style="color:red">&#9888;</span> Numeric values are rouned up to 4 decimal places<br>
+                (Ten thousandths place)
+
+            </article>
+</body>
+</html>
