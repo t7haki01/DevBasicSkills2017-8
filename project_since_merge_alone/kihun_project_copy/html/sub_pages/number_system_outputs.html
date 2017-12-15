@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/global.css" type="text/css">
+        <link rel="stylesheet" href="css/google_like.css" type="text/css">
+        <style>
+        table
+            {
+                border-collapse: collapse;
+                background: white;
+                table-layout: auto;
+                visibility: hidden;
+            }
+
+        td, th
+            {
+                border: 1px solid black;
+                text-align: left;
+                padding: 8px;
+            }
+
+        </style>
+        <script type="text/javascript" src="javascript/global.js"></script>
+        <script type="text/javascript" src="javascript/number_system_outputs.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+                <div class="logo"><a href="../index.html">
+                        <span style="color:#4885ed">M</span><span style="color:#db3236">a</span><span style="color:#f4c20d">t</span><span style="color:#4885ed">h </span>
+                        <span style="color:#4885ed">P</span><span style="color:#db3236">r</span><span style="color:#f4c20d">o</span><span style="color:#4885ed">j</span><span style="color:#3cba54">e</span><span style="color:#db3236">c</span><span style="color:#4885ed">t</span>
+                </a></div>
+            <div><h1 class="head_line"><a href="number_system_outputs.html">Number System Outputs</a></h1></div>
+        </header>
+        <nav>
+                    <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>                
+                    <div class="side_navigation" id="side_menu"><h2>    
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="number_system_conversions.html">Number system <br>conversions</a></li>
+                        <li><a class="active" href="number_system_outputs.html">Number system <br>outputs</a></li>
+                        <li><a href="combinatorics.html">Combinatorics</a></li>
+                        <li><a href="truth_tables.html">Truth tables </a></li>
+                        <li><a href="random_values.html">Random values</a></li>
+                        <li><a href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>
+                        <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
+                    </h2></div>
+        </nav>
+        <article>
+                <div align="center"><div class="text_table">In this page, math tool <b>Number system outputs</B> for<br>
+                    showing decimals 0-50 in binary, octal, and hexadecimal.<br>
+                    <br><b>< Instruction ></b><br>
+                    To see the table, click the <b>"Show"</b><br>
+                    To hide the table, click the <b>"Hide"</b><br>
+                    To make values as <b>"0"</b> in the table, click the <b>"Clear"</b><br>
+                    To make values as <b>"original table values"</b> in the table, click the <b>"Make"</b><br>                    
+                    
+                </div></div>
+
+            <div class="button_table">
+                <button onclick="show_table()">Show</button>
+                <button onclick="hide_table()">Hide</button>
+                <button onclick="clear_table()">Clear</button>
+                <button onclick="make_table()">Make</button>
+            </div>
+            <div class="scroll_div" id="scroll_table">
+            <table align="center" id="output_table">
+                <tr>
+                    <th>Decimal</th>
+                    <th>Binary</th>
+                    <th>Octal</th>
+                    <th>Hexadecimal</th>
+                </tr>
+                    <script>
+                            for( i=0; i<51; i++)
+                            {
+                                document.write("<tr>") ;
+                                document.write("<td>" + i + "</td>") ;
+                                document.write("<td>" + i.toString(2) + "</td>") ;
+                                document.write("<td>" + i.toString(8) + "</td>") ;
+                                document.write("<td>" + i.toString(16) + "</td>") ;
+                                document.write("</tr>") ;
+                            }
+                    </script>
+            </table></div>
+        </article></div>
+    </body>
+</html>

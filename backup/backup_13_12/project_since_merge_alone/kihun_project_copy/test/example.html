@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="application/javascript">
+        var i = 5;
+        var x = 10 + i;
+
+        function test(event)
+        {
+           console.log("Hello") ;
+           var e = document.getElementById("source") ;
+           debugger   
+           console.log(e);
+        
+            var result = 0 ;
+    
+          if( e.value === "" )
+          {
+            result = parseInt(event.key) + 1 ;
+          }
+          else
+          {
+            result = parseInt( e.value + event.key ) + 1 ;
+          }
+
+           var target = document.getElementById("result") ;
+           target.innerText = result ;
+        }
+
+        function test2(event)
+        {
+           var e = document.getElementById("source") ;
+           debugger   
+           var target = document.getElementById("result") ;
+           target.innerText = e.valueAsNumber + 1 ;
+        }
+
+        function create()
+        {
+            var newElement = document.createElement("div") ;
+            newElement.innerText = "Hello World" ;
+            document.body.appendChild(newElement);
+        }
+
+
+        
+        </script>
+    </head>
+    <body>
+        <input oninput="test2(event)" id="source" type="number"> + 1 =<span id="result">X</span> 
+        <button onclick="create()"> Click me</button>
+    </body>
+</html>

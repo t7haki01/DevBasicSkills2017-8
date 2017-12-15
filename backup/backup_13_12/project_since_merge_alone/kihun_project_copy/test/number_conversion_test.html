@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<!-- 4.12 first function, have to figure out change 
+                input as each system number
+                with using for loop then sum of it or ? --> 
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="basic.css" type="text/css">
+        <title>test for javascript</title>
+
+        <script>
+
+        function convert_number()
+        {
+            var from_number = Number(document.getElementById("number_from").value) ;
+
+            var conversion_number_result = document.getElementById( "to_number") ;
+
+            var selection_to = document.getElementById("selected") ;
+
+            var selection_from = document.getElementById("selected_from") ;
+            
+
+
+            if(selection_from.value == "binary")
+            {
+                document.getElementById("number_from").value = "0B" ;
+                
+                if (document.getElementById("selected_from").value == document.getElementById("selected").value)
+                {
+                conversion_number_result.innerHTML = from_number.toString(2) ;
+                }
+                else if (selection_to.value == "octal")
+                {
+                conversion_number_result.innerHTML = from_number.toString(8) ;
+                }
+                else if (selection_to.value == "hexadecimal")
+                {
+                conversion_number_result.innerHTML = from_number.toString(16) ;
+                }
+                else
+                {
+                conversion_number_result.innerHTML = from_number.toString(10) ;
+                }
+            }
+              if(selection_from.value == "octal")
+                    {
+                        document.getElementById("number_from").value = "0O" ;
+                        
+                        if (document.getElementById("selected_from").value == document.getElementById("selected").value)
+                        {
+                        conversion_number_result.innerHTML = from_number.toString(8) ;
+                        }
+                        else if (selection_to.value == "binary")
+                        {
+                        conversion_number_result.innerHTML = from_number.toString(2) ;
+                        }
+                        else if (selection_to.value == "hexadecimal")
+                        {
+                        conversion_number_result.innerHTML = from_number.toString(16) ;
+                        }
+                        else
+                        {
+                        conversion_number_result.innerHTML = from_number.toString(10) ;
+                        }
+                    }
+                        if(selection_from.value == "hexadecimal")
+                            {
+                                document.getElementById("number_from").value = "0X" ;
+                                
+                                if (document.getElementById("selected_from").value == document.getElementById("selected").value)
+                                {
+                                conversion_number_result.innerHTML = from_number.toString(16) ;
+                                }
+                                else if (selection_to.value == "octal")
+                                {
+                                conversion_number_result.innerHTML = from_number.toString(8) ;
+                                }
+                                else if (selection_to.value == "binary")
+                                {
+                                conversion_number_result.innerHTML = from_number.toString(2) ;
+                                }
+                                else
+                                {
+                                conversion_number_result.innerHTML = from_number.toString(10) ;
+                                }
+                            }
+                            else
+                            {
+                                
+                                if (document.getElementById("selected_from").value == document.getElementById("selected").value)
+                                {
+                                conversion_number_result.innerHTML = from_number.toString(10) ;
+                                }
+                                else if (selection_to.value == "octal")
+                                {
+                                conversion_number_result.innerHTML = from_number.toString(8) ;
+                                }
+                                else if (selection_to.value == "hexadecimal")
+                                {
+                                conversion_number_result.innerHTML = from_number.toString(16) ;
+                                }
+                                else
+                                {
+                                conversion_number_result.innerHTML = from_number.toString(2) ;
+                                }
+                            }
+
+        }
+            
+
+        function filter(event)
+        {
+
+            var number_input = document.getElementById("selected_from") ;
+
+            var number_input_user = parseInt(event.key) ;
+
+            if (number_input.value == "binary")
+            {       
+                if (number_input_user >= 2 || number_input_user < 0 )
+                {
+                    alert("wrong") ;
+                    event.preventDefault() ;
+                }
+
+            }
+            if(number_input.value == "octal")
+            {
+             if(number_input_user >= 8 || number_input_user < 0 )
+                {
+                    alert("wrong") ;
+                    event.preventDefault() ;
+                }
+            }
+            if(number_input.value == "hexadecimal")
+            {
+                var input_limit = "fghijkmlnopqrstuvwyzåäöFGHIJKLMNOPQRSTUVWYZÅÖÄ" ;
+             if( input_limit.includes(event.key) == true )
+                {
+                    alert("wrong") ;
+                    event.preventDefault() ;
+                }
+            }
+
+        }
+
+
+        </script>
+
+    </head>
+
+    <body>
+        
+        <div class="contents">
+            <h1 class="centered">This is test for javascript</h1>
+            <table class="border_test">
+                 <tr> 
+                     <td>
+                         From<select id="selected_from" name="selection_name" onchange="convert_number()">
+                                <option value="decimal" id="dec"> Decimal </option>
+                                <option value="binary" id="bin"> Binary </option>
+                                <option value="octal" id="oct"> Octal </option>
+                                <option value="hexadecimal" id="hexa"> Hexadecimal </option> 
+                            </select> 
+                        
+                         <input onkeydown="filter(event)" id="number_from" pattern="[0-1A-Ea-e]" type="text" value="" required ></input>
+                         
+                     </td>
+                         <td>
+                            <button onclick="convert_number()">Convert</button>
+                         </td>
+                     <td>
+                         To<select id="selected" name="selection_name" >
+                                <option value="decimal" id="dec"> Decimal </option>
+                                <option value="binary" id="bin"> Binary </option>
+                                <option value="octal" id="oct"> Octal </option>
+                                <option value="hexadecimal" id="hexa"> Hexadecimal </option> 
+                            </select> 
+                     </td>
+                     <td id="to_number"> </td> 
+                 </tr>
+            </table>
+        </div>
+<p id="tem_number"></p>
+    </body>
+</html>
