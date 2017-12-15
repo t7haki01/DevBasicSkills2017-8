@@ -23,7 +23,7 @@ function value_number()
     }
     else
     {
-        user_input.value = "0" ;
+        user_input.value = "" ;
     }
 }
 

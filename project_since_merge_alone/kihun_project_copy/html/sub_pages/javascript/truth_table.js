@@ -3,13 +3,16 @@
 function truth_table(elem) 
 {
     remove_table();
-    var two_number_value1 = [1, 1, 0, 0] ;
-    var two_number_value2 = [1, 0, 1, 0] ;
+    var two_number_value1 = [0, 0, 1, 1] ;
+    var two_number_value2 = [0, 1, 0, 1] ;
 
-    var three_number_value1 = [1, 1, 1, 0, 1, 0, 0, 0] ;
-    var three_number_value2 = [1, 1, 0, 1, 0, 1, 0, 0] ;
-    var three_number_value3 = [1, 0, 1, 1, 0, 0, 1, 0] ;
 
+
+
+    var three_number_value1 = [0, 0, 0, 1, 0, 1, 1, 1] ;
+    var three_number_value2 = [0, 0, 1, 0, 1, 0, 1, 1] ;
+    var three_number_value3 = [0, 1, 0, 0, 1, 1, 0, 1] ;
+                            
     var table = document.getElementById("truth_table") ;
 
     var title_row = table.insertRow(0) ;
@@ -127,12 +130,16 @@ function truth_table(elem)
 function truth_table_tf(elem)
 {
     remove_table() ;
-    var two_tf_value1 = [true, true, false, false] ;
-    var two_tf_value2 = [true, false, true, false] ;
-
-    var three_tf_value1 = [true, true, true, false, true, false, false, false] ;
-    var three_tf_value2 = [true, true, false, true, false, true, false, false] ;
-    var three_tf_value3 = [true, false, true, true, false, false, true, false] ;
+    var two_tf_value1 = [false, false, true, true] ;
+                        
+    var two_tf_value2 = [false, true, false, true] ;
+                        
+    var three_tf_value1 = [false, false, false, true, false, true, true, true] ;
+                            
+    var three_tf_value2 = [false, false, true, false, true, false, true, true] ;
+                            
+    var three_tf_value3 = [false, true, false, false, true, true, false, true] ;
+                            
     
     var table = document.getElementById("truth_table") ;
     

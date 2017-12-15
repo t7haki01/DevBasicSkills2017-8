@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+            <title>Project - Math tools - Number_System_Conversions</title>
         <link rel="stylesheet" href="css/global.css" type="text/css">
         <link rel="stylesheet" href="css/google_like.css" type="text/css">
         <style>
@@ -59,10 +60,6 @@
                             </td>
                             
                             <td>
-                                <button onclick="convert_number()">Convert</button>
-                            </td>
-                            
-                            <td>
                                 <span>To</span>
                                 <select id="number_value_to">
                                     <option value="decimal">Decimal</option>
@@ -71,25 +68,30 @@
                                     <option value="hexadecimal">Hexadecimal</option>
                                 </select>
                             </td>
-                            
+
+                            <td>
+                                <button onclick="convert_number()">Convert</button>
+                            </td>
+
                             <td><div class="result_section">
                                 <span id="result_number"></span>
                                 </div>
                             </td>
+
                     </tr></table>
 
                     <div align="center"><div class="text_convert">
-                            In this page, math tool <b>Number system conversions</b><br>
-                            is able for converting from one numbering system to the other numbering system.<br> 
+                            In this page, math tool <b>Number system conversions</b> is able for converting<br>
+                            from one numbering system to the other numbering system.<br> 
                             In here, prefix is used for representing each numbering system.<br>
-                            (" " = Decimal "<b>0B</b>" = Binary ,"<b>0O</b> = Octal", "<b>0X</b>" = Hexadecimal ) <br>
+                            (Decimal = " ", Binary = "<b>0B</b>", Octal = "<b>0O</b>", Hexadecimal = "<b>0X</b>")<br>
                             <span style="color:red"><b>So if you remove then it won't work, you can always write down again prefix</b></span>
                             <br><br><b>< Instruction ></b><br>
                             1.Select which numbering system you want to change from next to <b>"From"</b><br> 
                             2.Write down number in <b>"Input box"</b><br>
                             3.Then choose which numbering system you want to get from next to <b>"To"</b><br>
                             4.Then press <b>"Convert"</b><br><br>
-                            In input box, each numbering systems have <span style="color:red"><b>restricted input</b></span><br>
+                            <span style="color:red">&#9888;</span> In input box, each numbering systems have <span style="color:red"><b>restricted input</b></span><br>
                             You can put only Decimal(number 0 ~ 9), Binary(number 0, 1, letter "B"), <br>
                             Octal(number 0 ~ 7, letter "O"), Hexadecimal(number 0 ~ 9, letter a,b,c,d,e,f,x)  
                         </div></div>
