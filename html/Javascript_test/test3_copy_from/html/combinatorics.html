@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/global.css" type="text/css">
+        <style>
+        table
+        {
+            margin: auto;
+        }
+        .input_box
+        {
+            resize: horizontal ;
+            width: 40px;
+        }
+        .input_box:focus
+        {
+            min-width: 50px;
+        }
+        </style>
+        <script type="text/javascript" src="javascript/global.js"></script>
+        <script type="text/javascript" src="javascript/combinatorics.js"></script>        
+    </head>
+    <body>
+        <div class="container">
+        <header>
+                <div class="logo"><a href="index_project.html">
+                        <span style="color:blue">M</span><span style="color:red">a</span><span style="color:yellow">t</span><span style="color:blue">h </span>
+                        <span style="color:blue">P</span><span style="color:red">r</span><span style="color:yellow">o</span><span style="color:blue">j</span><span style="color:green">e</span><span style="color:red">c</span><span style="color:blue">t</span>
+                    </a></div>
+            <div><h1 class="head_line"><a href="combinatorics.html">Combinatorics</a></h1></div>
+        </header>
+        <nav>
+                    <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>                
+                    <div class="side_navigation" id="side_menu"><h2>    
+                        <li><a href="index_project.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="number_system_conversions.html">Number system <br>conversions</a></li>
+                        <li><a href="number_system_outputs.html">Number system <br>outputs</a></li>
+                        <li><a class="active" href="combinatorics.html">Combinatorics</a></li>
+                        <li><a href="truth_tables.html">Truth tables </a></li>
+                        <li><a href="random_values.html">Random values</a></li>
+                        <li><a href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>
+                        <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
+                    </h2></div>
+        </nav>
+        <article><div class="article_sec">
+               aaa Text here, here will come some explanation
+                Text here, here will come some explanation
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                Text here, here will come some explanation<br>
+                <form>
+                    <input type="radio" onchange="selection_com()" name="select">Combination
+                    <input type="radio" onchange="selection_per_without()" name="select">Permutation(without replacement)
+                    <input type="radio" onchange="selection_per_with()" name="select">Permutation(with replacement)
+                </form>         
+                <table>
+                        <tr>
+                            <td>
+                            <table id="combination_table">
+                                    <tr><td>Combinations</td></tr>
+                                    <tr>
+                                        <td>nCr =</td>
+                                        <td></td>
+                                        <td id="result_combi"></td>
+                                    </tr>
+                                    <tr><td>n <input class="input_box" type="number" id="combination_n" disabled></td></tr>
+                                    <tr><td>r <input class="input_box" type="number" id="combination_r" disabled></td></tr>
+                                    <tr><td><button onclick="combi()">calculate</button></td></tr>
+                            </table>
+                            </td>
+                            <td>
+                            <table id="permutation_without_table">
+                                    <tr><td>Permutation<br>(without replacement)</td></tr>
+                                    <tr>
+                                        <td>nPr =</td>
+                                        <td></td>
+                                        <td id="result_permu_without"></td>
+                                    </tr>
+                                    <tr><td>n <input class="input_box" type="number" id="permutation_without_n" disabled></td></tr>
+                                    <tr><td>r <input class="input_box" type="number" id="permutation_without_r" disabled></td></tr>
+                                    <tr><td><button onclick="permu_without()">calculate</button></td></tr>
+                            </table>
+                            </td>
+                                <td>
+                                <table id="permutation_with_table">
+                                        <tr><td>Permutation<br>(with replacement)</td></tr>
+                                        <tr>
+                                            <td>nPr =</td>
+                                            <td></td>
+                                            <td id="result_permu_with"></td>
+                                        </tr>
+                                        <tr><td>n <input class="input_box" type="number" id="permutation_with_n" disabled></td></tr>
+                                        <tr><td>r <input class="input_box" type="number" id="permutation_with_r" disabled></td></tr>
+                                        <tr><td><button onclick="permu_with()">calculate</button></td></tr>
+                                </table>
+                                </td>
+                        </tr>
+                    </table>    
+            
+            
+            </div></article>
+    </div>
+    </body>
+</html>

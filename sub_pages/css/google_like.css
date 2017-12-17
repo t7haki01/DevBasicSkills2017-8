@@ -66,9 +66,10 @@ li a:hover:not( .active)
     max-width: 500px;
 }
 
-.button_hide
+.button_hide_permu
 {
     visibility: hidden;
+    display: none;
 }
 
 .scroll_div

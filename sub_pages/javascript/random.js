@@ -2,8 +2,8 @@
 
 function random()
 {
-    var smallest_number = Number(document.getElementById("min_number").value) ;
-    var biggest_number = Number(document.getElementById("max_number").value) ;
+    var smallest_number = Number(document.getElementById("min_number").value) ; // Even input type is number for using toFixed method
+    var biggest_number = Number(document.getElementById("max_number").value) ;  // In here, Number object is used
     var result_random = document.getElementById("result_number") ;
     var count_number = document.getElementById("how_many").value ;
     var decimal_point = document.getElementById("decimals").value ;

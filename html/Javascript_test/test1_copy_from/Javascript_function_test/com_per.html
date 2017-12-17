@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- with layout table inside table so put "with replacement" inside of table then 
+    visible with button or something 5.12 -->
+
+<html>
+    <head>
+        <style>
+        .input_box
+        {
+            resize: horizontal;
+            width: 30px;
+        }
+
+        .input_box:focus
+        {
+            min-width: 50px;
+        }
+        </style>
+        <script>
+        function factorial(x)
+        {
+            if (x === 0)
+            {
+                return 1 ;
+            }
+            return x * factorial(x-1) ;
+        }
+
+        function combi()
+        {
+            var combi_n = document.getElementById("combi_n_cr").value ;
+            var combi_r = document.getElementById("combi_nc_r").value ;
+
+            var result_com = factorial(combi_n) / factorial(combi_r) / factorial(combi_n - combi_r) ;
+            document.getElementById("result_combi").innerHTML = result_com ;
+        }
+
+        function permu()
+        {
+            var permu_n = document.getElementById("permu_n_cr").value ;
+            var permu_r = document.getElementById("permu_nc_r").value ;
+            var result_per = factorial(permu_n) / factorial(permu_n - permu_r) ;
+            document.getElementById("result_permu").innerHTML = result_per ;
+        }
+        function replace()
+        {
+            var replace_n = document.getElementById("replace_n_cr").value ;
+            var replace_r = document.getElementById("replace_nc_r").value ;
+            var result_replace = Math.pow(replace_n, replace_r) ;
+            document.getElementById("result_replace").innerHTML = result_replace ;
+        }
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Test for combinations and permutations</h1>
+        <table>
+            <tr>
+                <td>Combinations</td>
+                <td></td>
+                <td colspan="4"></td>
+                <td>Permutations</td>
+                <td></td>
+                <td colspan="4"></td>
+                <td>with_replacement</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nCr =</td>
+                <td id="result_combi"></td>
+                <td colspan="4"></td>
+                <td>nPr =</td>
+                <td id="result_permu"></td>
+                <td colspan="4"></td>
+                <td>nPr =</td>
+                <td id="result_replace"></td>
+            </tr>
+            <tr>
+                <td>N<input class="input_box" type="number" id="combi_n_cr"></td>
+                <td></td>
+                <td colspan="4"></td>
+                <td>N<input class="input_box" type="number" id="permu_n_cr"></td>
+                <td></td>
+                <td colspan="4"></td>
+                <td>N<input class="input_box" type="number" id="replace_n_cr"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>R<input class="input_box" type="number" id="combi_nc_r"></td>
+                <td></td>
+                <td colspan="4"></td>
+                <td>R<input class="input_box" type="number" id="permu_nc_r"></td>
+                <td></td>
+                <td colspan="4"></td>
+                <td>R<input class="input_box" type="number" id="replace_nc_r"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button onclick="combi()">calculate</button></td>
+                <td colspan="5"></td>
+                <td><button onclick="permu()">calculate</button></td>
+                <td colspan="5"></td>
+                <td><button onclick="replace()"<>calculate</button></td>
+            </tr>
+        </table>
+
+        
+
+    </body>
+</html>

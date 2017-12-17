@@ -59,32 +59,41 @@
             </h2></div>
         </nav>
         <article>
+
+            
+
+
                 <div align="center"><div class="text_index">
                     <iframe width="600" height="345" src="https://www.youtube.com/embed/NO4H4YROdqk" frameborder="0" allowfullscreen></iframe>
+                    
                     <br><b>Trigonometric function values</b> for checking Sin, Cos, Tan degrees in numeric values.<br>
                     <span style="color: gray">1,132,331 views</span><br>
+                    
+                    <table align="left">
+                            <tr>
+                                <td><select id="selection_value">
+                                    <option value="sin">Sin</option>
+                                    <option value="cos">Cos</option>
+                                    <option value="tan">Tan</option>    
+                                </select></td>
+                                <td><input type="number" id="input_box" value="0"></td>
+                                <td><button onclick="convert()">=</button></td>
+                                <td id="result"></td>
+                            </tr>
+                            <tr><td colspan="4">
+                                <span style="color:red">&#9888;</span> Numeric values are rouned up to 4 decimal places<br>
+                                (Ten thousandths place)
+                            </td></tr>
+                        </table>
+
                     <table align="left">
                             <tr><td><img  src="image/oamk_logo.png" width="60px" align="left"></td>
-                                <br><td><b>< Instruction ></b> <br><span style="color:gray">Published on Dec 14, 2017</span> <br>
+                                <td><b>< Instruction ></b> <br><span style="color:gray">Published on Dec 14, 2017</span> <br>
                             1. Choose the which value you want to get<br>2. Put the <b>"Degree"</b> which you want to get <br>
                             3. Click the <b>" = "</b> button
                         </tr></td></table>
                 </div></div>                
                 
-                <table align="left">
-                    <tr>
-                        <td><select id="selection_value">
-                            <option value="sin">Sin</option>
-                            <option value="cos">Cos</option>
-                            <option value="tan">Tan</option>    
-                        </select></td>
-                        <td><input type="number" id="input_box" value="0"></td>
-                        <td><button onclick="convert()">=</button></td>
-                        <td id="result"></td>
-                    </tr>
-                </table><br><br>
-                <span style="color:red">&#9888;</span> Numeric values are rouned up to 4 decimal places<br>
-                (Ten thousandths place)
 
             </article>
 </body>

@@ -5,14 +5,7 @@
         <link rel="stylesheet" href="css/global.css" type="text/css">
         <link rel="stylesheet" href="css/google_like.css" type="text/css">
         <style>
-        table
-        {
-            padding: 10px 50px 1px;
-        }
-        table td
-        {
-            padding-right: 30px;
-        }
+
         .input_box
         {
             resize: horizontal ;
@@ -22,6 +15,7 @@
         {
             min-width: 50px;
         }
+        
         </style>
         <script type="text/javascript" src="javascript/global.js"></script>
         <script type="text/javascript" src="javascript/combinatorics.js"></script>        
@@ -59,8 +53,8 @@
                     4. Then click the <b>"Calculate"</b>
                 </div></div>
 
-        <table align="center"><tr>
-                <td style="border-right:1px solid black"><table class="combi_table" id="combination_table">
+        <table style="margin-top:20px" align="center"><tr>
+                <td><table class="combi_table">
                         <tr><th colspan="4"><input type="radio" onchange="selection_com()" name="select">Combination</th></tr>
                         <tr><td></td></tr>
                         <tr>
@@ -70,18 +64,18 @@
                         </tr>
                         <tr><td colspan="2">n <input class="input_box" type="number" id="combination_n" disabled></td></tr>
                         <tr><td colspan="2">r <input class="input_box" type="number" id="combination_r" disabled>
-                        </td>
-                        <td align="center" colspan="3"><button onclick="combi()">Calculate</button></td></tr>
+                        </td><td align="center" colspan="3"><button onclick="combi()">Calculate</button>
+                        </td></tr>
                         
-                </table></td>
+        </table></td>
                     
-                <td><table id="permutation_table"><col width="30%"><col width="30%"><col width="30%">
+                <td><table class="permu_table"><col width="30%"><col width="30%"><col width="30%">
                     <tr><th colspan="2"><input type="radio" onclick="button_show()" name="select">Permutation</th></tr>    
                     
-                    <tr><td colspan="3"><div id="permutation_without_button" class="button_hide">
+                    <tr><td colspan="3"><div id="permutation_without_button" class="button_hide_permu">
                             <input type="radio" onchange="selection_per()" name="select" id="permutation_without">Sampling without replacement
                     </div></td></tr>  
-                    <tr><td colspan="3"><div id="permutation_with_button" class="button_hide">
+                    <tr><td colspan="3"><div id="permutation_with_button" class="button_hide_permu">
                             <input type="radio" onchange="selection_per()" name="select" id="permutation_with">Sampling with replacement
                     </div></td></tr>
                         
@@ -98,19 +92,7 @@
                         
                 </table></td>                    
     </tr></table>    
-            <!-- 15_12 test for div table-->
-    <div class="div_table">
-        <div class="div_row">
-            <div class="div_dc">Combination</div>
-            <div class="div_dc"></div>
-            <div class="div_dc"></div>
-        </div>
-        <div class="div_row">
-            <div class="div_dc">nCr</div>
-            <div class="div_dc">=</div>
-            <div class="div_dc"></div>
-        </div>
-    </div>
+          
     </article>
     </div>
     </body>

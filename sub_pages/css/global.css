@@ -107,10 +107,25 @@ li a:hover:not( .active)
 
 .combi_table
 {
-    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 6px 20px 8px;
+    margin-right: 10px;
 }
 
 .combi_table th
+{
+    height: 60px;
+    vertical-align: top;
+}
+
+.permu_table
+{
+    border: 1px solid black;
+    padding: 5px 5px 5px;
+    margin-left: 10px;
+}
+
+.permu_table th
 {
     height: 60px;
     vertical-align: top;
@@ -132,3 +147,4 @@ li a:hover:not( .active)
 {
     display: table-column;
 }
+
