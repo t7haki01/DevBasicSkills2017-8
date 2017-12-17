@@ -116,55 +116,6 @@ li a:hover:not( .active)
     vertical-align: top;
 }
 
-.side_navigation_youtube
-{
-    float: left;
-    width: 160px;
-    font-size: 10px ;
-    font-family: Arial, Helvetica, sans-serif ;
-    padding: 0px 5px 10px;
-    visibility: visible;
-    display: block;
-    background-color: hsla(0, 0%, 93.3%, .4);
-}
-
-.show_button_youtube
-{
-    visibility: visible ;
-    float: left;
-    max-width: 160px ;
-    margin: auto;
-    font-size: 10px;
-    border: none;
-    background-color:white;
-    cursor: pointer;
-    display: block;
-}
-
-.head_line_youtube
-{
-    float: center;
-    font-size: 30px ;
-    width: 800px;
-    text-align: center;
-    margin: auto;
-}
-
-.header_youtube
-{
-    display: inline;
-    padding: 10px 10px 10px;
-}
-
-.logo2
-{
-    font-size:25px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-    float: left;
-    width: 250px;
-}
-
-
 .div_table
 {
     display: block;

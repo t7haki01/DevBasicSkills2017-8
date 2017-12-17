@@ -5,18 +5,6 @@
         <link rel="stylesheet" href="css/global.css" type="text/css">
         <link rel="stylesheet" href="css/google_like.css" type="text/css">
         <style>
-        table
-        {
-            margin: 0px auto ;
-        }
-        .text_convert
-        {
-            font-size: 15px;
-            font-family: Arial, Helvetica, sans-serif ;
-            line-height: 170% ;    
-            text-align: left;
-            max-width: 705px;
-        }
         </style>
         <script type="text/javascript" src="javascript/global.js"></script>
         <script type="text/javascript" src="javascript/conversion.js"></script>
@@ -28,7 +16,7 @@
                         <span style="color:#4885ed">M</span><span style="color:#db3236">a</span><span style="color:#f4c20d">t</span><span style="color:#4885ed">h </span>
                         <span style="color:#4885ed">P</span><span style="color:#db3236">r</span><span style="color:#f4c20d">o</span><span style="color:#4885ed">j</span><span style="color:#3cba54">e</span><span style="color:#db3236">c</span><span style="color:#4885ed">t</span>
                 </a></div>
-            <div><h1 class="head_line"><a href="number_system_conversions.html">Number System Conversions</a></h1></div>
+            <div><h1 class="head_line_convert"><a href="number_system_conversions.html">Number System Conversions</a></h1></div>
         </header>
         <nav>
                     <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>
@@ -44,23 +32,26 @@
                         <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
                     </h2></div>
         </nav>
-        <article>                
-                
-                <table align="center">         
-                    <table cellspacing="30"><tr>
-                            <td>
-                                <span>From</span>
+        <article>     
+                    <table align="center" class="conversion_table"><tr>
+                        <td><table><tr>
+                                <td>
+                                From
                                 <select id="number_value_from" onchange="value_number()">
                                     <option value="decimal">Decimal</option>
                                     <option value="binary">Binary</option>
                                     <option value="octal">Octal</option>
                                     <option value="hexadecimal">Hexadecimal</option>
                                 </select>
+                                </td>
+                            <td>
                                 <input onkeydown="filter(event)" id="input_user" type="text" value="">
                             </td>
-                            
+                        </tr></table></td>
+
+                        <td><table class="for_table_space"><tr>
                             <td>
-                                <span>To</span>
+                                To
                                 <select id="number_value_to">
                                     <option value="decimal">Decimal</option>
                                     <option value="binary">Binary</option>
@@ -77,10 +68,10 @@
                                 <span id="result_number"></span>
                                 </div>
                             </td>
-
+                        </tr></table></td>
                     </tr></table>
 
-                    <div align="center"><div class="text_convert">
+                    <div ><div class="text_convert"><br>
                             In this page, math tool <b>Number system conversions</b> is able for converting<br>
                             from one numbering system to the other numbering system.<br> 
                             In here, prefix is used for representing each numbering system.<br>
