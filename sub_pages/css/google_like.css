@@ -1,4 +1,26 @@
 
+.head_line_index
+{
+    font-size: 50px ;
+    margin: auto;
+    max-width: 750px;
+}
+
+.head_line_convert
+{
+    font-size: 50px ;
+    margin: auto;
+    max-width: 620px;
+}
+
+.head_line_truth
+{
+    text-align: left ;
+    font-size: 50px ;
+    margin: auto;
+    max-width: 460px;
+}
+
 .google_side_navigation
 {
     background-color: #fafafa;
@@ -98,28 +120,6 @@ li a:hover:not( .active)
     line-height: 170% ;    
     text-align: left;
     max-width: 680px;
-}
-
-.head_line_index
-{
-    font-size: 50px ;
-    margin: auto;
-    max-width: 750px;
-}
-
-.head_line_convert
-{
-    font-size: 50px ;
-    margin: auto;
-    max-width: 620px;
-}
-
-.head_line_truth
-{
-    text-align: left ;
-    font-size: 50px ;
-    margin: auto;
-    max-width: 460px;
 }
 
 .text_convert
