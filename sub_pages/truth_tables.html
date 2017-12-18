@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <title>Truth_Table</title>
+        <title>Truth_Table</title>
         <link rel="stylesheet" href="css/global.css" type="text/css">
         <link rel="stylesheet" href="css/google_like.css" type="text/css">
         <style>
@@ -10,48 +10,52 @@
             margin: auto;
             padding: 0px 5px 5px;
         }
+        
         table td
         {
             padding: 5px;
         }
         </style>
+
         <script type="text/javascript" src="javascript/global.js"></script>
         <script type="text/javascript" src="javascript/truth_table.js"></script>
     </head>
-    <body>
-        <div class="container">
+
+    <body><div class="container">
         <header>
-                <div class="logo"><a href="../index.html">
-                        <span style="color:#4885ed">M</span><span style="color:#db3236">a</span><span style="color:#f4c20d">t</span><span style="color:#4885ed">h </span>
-                        <span style="color:#4885ed">P</span><span style="color:#db3236">r</span><span style="color:#f4c20d">o</span><span style="color:#4885ed">j</span><span style="color:#3cba54">e</span><span style="color:#db3236">c</span><span style="color:#4885ed">t</span>
-                </a></div>
+            <div class="logo"><a href="../index.html">
+                <span style="color:#4885ed">M</span><span style="color:#db3236">a</span><span style="color:#f4c20d">t</span><span style="color:#4885ed">h </span>
+                <span style="color:#4885ed">P</span><span style="color:#db3236">r</span><span style="color:#f4c20d">o</span><span style="color:#4885ed">j</span><span style="color:#3cba54">e</span><span style="color:#db3236">c</span><span style="color:#4885ed">t</span>
+            </a></div>
             <div><h1 class="head_line_truth"><a href="truth_tables.html">Truth Tables</a></h1></div>
         </header>
+        
         <nav>
-                    <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>                
-                    <div class="side_navigation" id="side_menu"><h2>    
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="number_system_conversions.html">Number system <br>conversions</a></li>
-                        <li><a href="number_system_outputs.html">Number system <br>outputs</a></li>
-                        <li><a href="combinatorics.html">Combinatorics</a></li>
-                        <li><a class="active" href="truth_tables.html">Truth tables </a></li>
-                        <li><a href="random_values.html">Random values</a></li>
-                        <li><a href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>
-                        <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
-                    </h2></div>
+                <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>                
+            <div class="side_navigation" id="side_menu"><h2>    
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="number_system_conversions.html">Number system <br>conversions</a></li>
+                <li><a href="number_system_outputs.html">Number system <br>outputs</a></li>
+                <li><a href="combinatorics.html">Combinatorics</a></li>
+                <li><a class="active" href="truth_tables.html">Truth tables </a></li>
+                <li><a href="random_values.html">Random values</a></li>
+                <li><a href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>
+                <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
+            </h2></div>
         </nav>
+
         <article>
-                <div align="center"><div class="text_truth_table">
-                    In this page, math tool <b>Truth tables</b> is able for checking the<br>basic set of truth tables for basic operations.<br>
-                    Often the truth value TRUE (T) is marked as 1 and FALSE as 0. <br>
-                    <b>< Instruction ></b><br>
-                    Click the basic operations which you want to check the truth table<br>
-                    Frist line's operations are expressed with 1, 0<br>
-                    Second line's operations are expressed with true, false
-                </div></div>                
-                <table align="center">
+            <div align="center"><div class="text_truth_table">
+                In this page, math tool <b>Truth tables</b> is able for checking the<br>basic set of truth tables for basic operations.<br>
+                Often the truth value TRUE (T) is marked as 1 and FALSE as 0. <br>
+                <b>< Instruction ></b><br>
+                Click the basic operations which you want to check the truth table<br>
+                Frist line's operations are expressed with 1, 0<br>
+                Second line's operations are expressed with true, false
+            </div></div>                
         </article>
+
             <table>
                 <tr>
                     <td>With <b>"1, 0"</b></td>
@@ -62,20 +66,21 @@
                     <td><button type="button" id="pqr_and_or" onclick="truth_table(this)"> P &and; Q &or; R </button></td>
                     <td rowspan="2"><button type="button" id="clear" onclick="remove_table()"> Clear </button></td>    
                 </tr>
+
                 <tr>
-                        <td>With <b>"true, false"</b></td>
-                        <td><button type="button" id="qp_and" onclick="truth_table_tf(this)"> Q &and; P </button></td>
-                        <td><button type="button" id="qp_or" onclick="truth_table_tf(this)"> Q &or; P </button></td>
-                        <td><button type="button" id="rqp_and" onclick="truth_table_tf(this)"> R &and; Q &and; P </button></td>
-                        <td><button type="button" id="rqp_or" onclick="truth_table_tf(this)"> R &or; Q &or; P </button></td>
-                        <td><button type="button" id="pqr_or_and" onclick="truth_table_tf(this)"> P &or; Q &and; R </button></td>
+                    <td>With <b>"true, false"</b></td>
+                    <td><button type="button" id="qp_and" onclick="truth_table_tf(this)"> Q &and; P </button></td>
+                    <td><button type="button" id="qp_or" onclick="truth_table_tf(this)"> Q &or; P </button></td>
+                    <td><button type="button" id="rqp_and" onclick="truth_table_tf(this)"> R &and; Q &and; P </button></td>
+                    <td><button type="button" id="rqp_or" onclick="truth_table_tf(this)"> R &or; Q &or; P </button></td>
+                    <td><button type="button" id="pqr_or_and" onclick="truth_table_tf(this)"> P &or; Q &and; R </button></td>
                 </tr>
+                
                 <tr>
                     <td colspan="7"><table id="truth_table" class="truth_table_css">
                     <tr><td></td></tr>
                     </table></td>
                 </tr>
             </table>
-    </div>
-    </body>
+    </div></body>
 </html>

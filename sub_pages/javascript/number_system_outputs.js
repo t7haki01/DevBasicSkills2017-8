@@ -16,6 +16,7 @@
         {
             var i = 1;
             var j = 0;
+            
             while (i<52)
             {
                 var cell_row_elements = document.getElementById("output_table").rows[i].cells;
@@ -23,10 +24,10 @@
                 while (j<4)
                 {
                     cell_row_elements[j].innerHTML = "0" ;
-                    j++;
+                    j++; // here is the index for the data cell
                 }
 
-                i++;
+                i++; // here is the index for the rows
                 j = 0;
             }            
         }
@@ -35,6 +36,7 @@
         {
             var i = 1;
             var j = 0;
+            
             while (i<52)
             {
                 var cell_row_elements = document.getElementById("output_table").rows[i].cells;

@@ -6,7 +6,7 @@ function factorial(x)
     {
         return 1 ;
     }
-    return x * factorial(x-1);
+        return x * factorial(x-1);
 }
 
 function combi()

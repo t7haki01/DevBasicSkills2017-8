@@ -28,7 +28,7 @@ function convert()
         }
         else
         {
-        result_after.innerHTML = Math.tan(degree).toFixed(4) ;
+            result_after.innerHTML = Math.tan(degree).toFixed(4) ;
         }
     }
 }

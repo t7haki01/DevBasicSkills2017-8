@@ -37,8 +37,8 @@ function convert_number()
     
         var value_to = document.getElementById("number_value_to") ;
 
-    if( value_from.value == "binary" )
-    {
+    if( value_from.value == "binary" ) // for the choice of value, i tried with only "if" condition, not with "else if" and "else"
+    {                                  // because i was curious how it works and it works so i let stay
         
         if( value_from.value == value_to.value )
         {

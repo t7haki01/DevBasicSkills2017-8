@@ -19,8 +19,8 @@ function show_youtube()
 
     if(document.getElementById("side_menu").style.visibility == "visible" || document.getElementById("side_menu").style.visibility == "")
     {
-    document.getElementById("side_menu").style.visibility = "hidden" ;    
-    document.getElementById("side_menu").style.display = "none" ;
+        document.getElementById("side_menu").style.visibility = "hidden" ;    
+        document.getElementById("side_menu").style.display = "none" ;
     }
     else
     {
