@@ -20,6 +20,7 @@ li a.active
     border-bottom: 2px solid #1DA1F2; 
     color: #1DA1F2;
 }
+
 li a:hover:not( .active)
 {
     color: #1DA1F2;

@@ -1,100 +1,88 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <title>Number_System_Conversions</title>
+        <title>Number_System_Conversions</title>
         <link rel="stylesheet" href="css/global.css" type="text/css">
         <link rel="stylesheet" href="css/google_like.css" type="text/css">
-        <style>
-        table
-        {
-            margin: 0px auto ;
-        }
-        .text_convert
-        {
-            font-size: 15px;
-            font-family: Arial, Helvetica, sans-serif ;
-            line-height: 170% ;    
-            text-align: left;
-            max-width: 705px;
-        }
-        </style>
+        <style></style>
         <script type="text/javascript" src="javascript/global.js"></script>
         <script type="text/javascript" src="javascript/conversion.js"></script>
     </head>
-    <body>
-        <div class="container">
+    
+    <body><div class="container">
         <header>
-                <div class="logo"><a href="../index.html">
-                        <span style="color:#4885ed">M</span><span style="color:#db3236">a</span><span style="color:#f4c20d">t</span><span style="color:#4885ed">h </span>
-                        <span style="color:#4885ed">P</span><span style="color:#db3236">r</span><span style="color:#f4c20d">o</span><span style="color:#4885ed">j</span><span style="color:#3cba54">e</span><span style="color:#db3236">c</span><span style="color:#4885ed">t</span>
-                </a></div>
-            <div><h1 class="head_line"><a href="number_system_conversions.html">Number System Conversions</a></h1></div>
+            <div class="logo"><a href="../index.html">
+                    <span style="color:#4885ed">M</span><span style="color:#db3236">a</span><span style="color:#f4c20d">t</span><span style="color:#4885ed">h </span>
+                    <span style="color:#4885ed">P</span><span style="color:#db3236">r</span><span style="color:#f4c20d">o</span><span style="color:#4885ed">j</span><span style="color:#3cba54">e</span><span style="color:#db3236">c</span><span style="color:#4885ed">t</span>
+            </a></div>
+            <div><h1 class="head_line_convert"><a href="number_system_conversions.html">Number System Conversions</a></h1></div>
         </header>
+
         <nav>
-                    <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>
-                    <div class="side_navigation" id="side_menu"><h2>    
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a class="active" href="number_system_conversions.html">Number system <br>conversions</a></li>
-                        <li><a href="number_system_outputs.html">Number system <br>outputs</a></li>
-                        <li><a href="combinatorics.html">Combinatorics</a></li>
-                        <li><a href="truth_tables.html">Truth tables </a></li>
-                        <li><a href="random_values.html">Random values</a></li>
-                        <li><a href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>
-                        <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
-                    </h2></div>
+            <li><button id="show_button" class="show_button" onclick="show()">Show side menu</button></li>
+        <div class="side_navigation" id="side_menu"><h2>    
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="number_system_conversions.html">Number system <br>conversions</a></li>
+            <li><a href="number_system_outputs.html">Number system <br>outputs</a></li>
+            <li><a href="combinatorics.html">Combinatorics</a></li>
+            <li><a href="truth_tables.html">Truth tables </a></li>
+            <li><a href="random_values.html">Random values</a></li>
+            <li><a href="trigonometric_function_values.html">Trigonometric <br>function values </a></li>
+            <li><button class="hide_button" onclick="hide()">Hide side menu</button></li>                        
+        </h2></div>
         </nav>
-        <article>                
-                
-                <table align="center">         
-                    <table cellspacing="30"><tr>
-                            <td>
-                                <span>From</span>
-                                <select id="number_value_from" onchange="value_number()">
-                                    <option value="decimal">Decimal</option>
-                                    <option value="binary">Binary</option>
-                                    <option value="octal">Octal</option>
-                                    <option value="hexadecimal">Hexadecimal</option>
-                                </select>
-                                <input onkeydown="filter(event)" id="input_user" type="text" value="">
-                            </td>
-                            
-                            <td>
-                                <span>To</span>
-                                <select id="number_value_to">
-                                    <option value="decimal">Decimal</option>
-                                    <option value="binary">Binary</option>
-                                    <option value="octal">Octal</option>
-                                    <option value="hexadecimal">Hexadecimal</option>
-                                </select>
-                            </td>
 
-                            <td>
-                                <button onclick="convert_number()">Convert</button>
-                            </td>
+        <article>     
+            <table align="center" class="conversion_table"><tr>
+                <td><table><tr>
+                        <td>From
+                            <select id="number_value_from" onchange="value_number()">
+                                <option value="decimal">Decimal</option>
+                                <option value="binary">Binary</option>
+                                <option value="octal">Octal</option>
+                                <option value="hexadecimal">Hexadecimal</option>
+                            </select>
+                        </td>
+                        <td>
+                        <input onkeydown="filter(event)" id="input_user" type="text" value="">
+                        </td>
+                </tr></table></td>
 
-                            <td><div class="result_section">
-                                <span id="result_number"></span>
-                                </div>
-                            </td>
+                <td><table class="for_table_space"><tr>
+                        <td>To
+                            <select id="number_value_to">
+                                <option value="decimal">Decimal</option>
+                                <option value="binary">Binary</option>
+                                <option value="octal">Octal</option>
+                                <option value="hexadecimal">Hexadecimal</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button onclick="convert_number()">Convert</button>
+                        </td>
+                        <td><div class="result_section">
+                            <span id="result_number"></span>
+                            </div>
+                        </td>
+                </tr></table></td>
+            </tr></table>
 
-                    </tr></table>
-
-                    <div align="center"><div class="text_convert">
-                            In this page, math tool <b>Number system conversions</b> is able for converting<br>
-                            from one numbering system to the other numbering system.<br> 
-                            In here, prefix is used for representing each numbering system.<br>
-                            (Decimal = " ", Binary = "<b>0B</b>", Octal = "<b>0O</b>", Hexadecimal = "<b>0X</b>")<br>
-                            <span style="color:red"><b>So if you remove then it won't work, you can always write down again prefix</b></span>
-                            <br><br><b>< Instruction ></b><br>
-                            1.Select which numbering system you want to change from next to <b>"From"</b><br> 
-                            2.Write down number in <b>"Input box"</b><br>
-                            3.Then choose which numbering system you want to get from next to <b>"To"</b><br>
-                            4.Then press <b>"Convert"</b><br><br>
-                            <span style="color:red">&#9888;</span> In input box, each numbering systems have <span style="color:red"><b>restricted input</b></span><br>
-                            You can put only Decimal(number 0 ~ 9), Binary(number 0, 1, letter "B"), <br>
-                            Octal(number 0 ~ 7, letter "O"), Hexadecimal(number 0 ~ 9, letter a,b,c,d,e,f,x)  
-                        </div></div>
-        </article></div>
-    </body>
+                <div ><div class="text_convert"><br>
+                        In this page, math tool <b>Number system conversions</b> is able for converting<br>
+                        from one numbering system to the other numbering system.<br> 
+                        In here, prefix is used for representing each numbering system.<br>
+                        (Decimal = " ", Binary = "<b>0B</b>", Octal = "<b>0O</b>", Hexadecimal = "<b>0X</b>")<br>
+                        <span style="color:red"><b>So if you remove then it won't work, you can always write down again prefix</b></span>
+                        <br><br><b>< Instruction ></b><br>
+                        1.Select which numbering system you want to change from next to <b>"From"</b><br> 
+                        2.Write down number in <b>"Input box"</b><br>
+                        3.Then choose which numbering system you want to get from next to <b>"To"</b><br>
+                        4.Then press <b>"Convert"</b><br><br>
+                        <span style="color:red">&#9888;</span> In input box, each numbering systems have <span style="color:red"><b>restricted input</b></span><br>
+                        You can put only Decimal(number 0 ~ 9), Binary(number 0, 1, letter "B"), <br>
+                        Octal(number 0 ~ 7, letter "O"), Hexadecimal(number 0 ~ 9, letter a,b,c,d,e,f,x)  
+                </div></div>
+        </article>
+    </div></body>
 </html>

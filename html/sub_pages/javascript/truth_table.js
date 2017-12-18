@@ -2,10 +2,10 @@
 
 function truth_table(elem) 
 {
-    remove_table();
+    remove_table(); // for printing only one table at one time very first it will erase first
+
     var two_number_value1 = [0, 0, 1, 1] ; // Here are arrays for variables for operations with two values 
     var two_number_value2 = [0, 1, 0, 1] ;
-
 
     var three_number_value1 = [0, 0, 0, 1, 0, 1, 1, 1] ; // Here are arrays for variables for operations with three values
     var three_number_value2 = [0, 0, 1, 0, 1, 0, 1, 1] ;
@@ -28,14 +28,14 @@ function truth_table(elem)
 
         for(i=0; i<4; i++)
         {
-        var row = table.insertRow(1) ;
-        var cell1 = row.insertCell(0) ;
-        var cell2 = row.insertCell(1) ;
-        var cell3 = row.insertCell(2) ;
-        
-        cell1.innerHTML = two_number_value1[i];
-        cell2.innerHTML = two_number_value2[i];
-        cell3.innerHTML = two_number_value1[i] && two_number_value2[i] ;
+            var row = table.insertRow(1) ;
+            var cell1 = row.insertCell(0) ;
+            var cell2 = row.insertCell(1) ;
+            var cell3 = row.insertCell(2) ;
+            
+            cell1.innerHTML = two_number_value1[i];
+            cell2.innerHTML = two_number_value2[i];
+            cell3.innerHTML = two_number_value1[i] && two_number_value2[i] ;
         }
     }
     
@@ -47,14 +47,14 @@ function truth_table(elem)
 
         for(i=0; i<4; i++)
         {
-        var row = table.insertRow(1) ;
-        var cell1 = row.insertCell(0) ;
-        var cell2 = row.insertCell(1) ;
-        var cell3 = row.insertCell(2) ;
-        
-        cell1.innerHTML = two_number_value1[i];
-        cell2.innerHTML = two_number_value2[i];
-        cell3.innerHTML = two_number_value1[i] || two_number_value2[i] ;
+            var row = table.insertRow(1) ;
+            var cell1 = row.insertCell(0) ;
+            var cell2 = row.insertCell(1) ;
+            var cell3 = row.insertCell(2) ;
+            
+            cell1.innerHTML = two_number_value1[i];
+            cell2.innerHTML = two_number_value2[i];
+            cell3.innerHTML = two_number_value1[i] || two_number_value2[i] ;
         }
     }
     
@@ -67,16 +67,16 @@ function truth_table(elem)
 
         for(i=0; i<8; i++)
         {
-        var row = table.insertRow(1) ;
-        var cell1 = row.insertCell(0) ;
-        var cell2 = row.insertCell(1) ;
-        var cell3 = row.insertCell(2) ;
-        var cell4 = row.insertCell(3) ;
-        
-        cell1.innerHTML = three_number_value1[i];
-        cell2.innerHTML = three_number_value2[i];
-        cell3.innerHTML = three_number_value3[i];
-        cell4.innerHTML = three_number_value1[i] && three_number_value2[i] && three_number_value3[i] ;
+            var row = table.insertRow(1) ;
+            var cell1 = row.insertCell(0) ;
+            var cell2 = row.insertCell(1) ;
+            var cell3 = row.insertCell(2) ;
+            var cell4 = row.insertCell(3) ;
+            
+            cell1.innerHTML = three_number_value1[i];
+            cell2.innerHTML = three_number_value2[i];
+            cell3.innerHTML = three_number_value3[i];
+            cell4.innerHTML = three_number_value1[i] && three_number_value2[i] && three_number_value3[i] ;
         }
     }
 
@@ -89,16 +89,16 @@ function truth_table(elem)
 
         for(i=0; i<8; i++)
         {
-        var row = table.insertRow(1) ;
-        var cell1 = row.insertCell(0) ;
-        var cell2 = row.insertCell(1) ;
-        var cell3 = row.insertCell(2) ;
-        var cell4 = row.insertCell(3) ;
-        
-        cell1.innerHTML = three_number_value1[i];
-        cell2.innerHTML = three_number_value2[i];
-        cell3.innerHTML = three_number_value3[i];
-        cell4.innerHTML = three_number_value1[i] || three_number_value2[i] || three_number_value3[i] ;
+            var row = table.insertRow(1) ;
+            var cell1 = row.insertCell(0) ;
+            var cell2 = row.insertCell(1) ;
+            var cell3 = row.insertCell(2) ;
+            var cell4 = row.insertCell(3) ;
+            
+            cell1.innerHTML = three_number_value1[i];
+            cell2.innerHTML = three_number_value2[i];
+            cell3.innerHTML = three_number_value3[i];
+            cell4.innerHTML = three_number_value1[i] || three_number_value2[i] || three_number_value3[i] ;
         }
     }
 
@@ -111,16 +111,16 @@ function truth_table(elem)
 
         for(i=0; i<8; i++)
         {
-        var row = table.insertRow(1) ;
-        var cell1 = row.insertCell(0) ;
-        var cell2 = row.insertCell(1) ;
-        var cell3 = row.insertCell(2) ;
-        var cell4 = row.insertCell(3) ;
-        
-        cell1.innerHTML = three_number_value1[i];
-        cell2.innerHTML = three_number_value2[i];
-        cell3.innerHTML = three_number_value3[i];
-        cell4.innerHTML = three_number_value1[i] && three_number_value2[i] || three_number_value3[i] ;
+            var row = table.insertRow(1) ;
+            var cell1 = row.insertCell(0) ;
+            var cell2 = row.insertCell(1) ;
+            var cell3 = row.insertCell(2) ;
+            var cell4 = row.insertCell(3) ;
+            
+            cell1.innerHTML = three_number_value1[i];
+            cell2.innerHTML = three_number_value2[i];
+            cell3.innerHTML = three_number_value3[i];
+            cell4.innerHTML = three_number_value1[i] && three_number_value2[i] || three_number_value3[i] ;
         }
     }
 }
@@ -128,6 +128,7 @@ function truth_table(elem)
 function truth_table_tf(elem)
 {
     remove_table() ;
+
     var two_tf_value1 = [false, false, true, true] ;
                         
     var two_tf_value2 = [false, true, false, true] ;
@@ -141,11 +142,11 @@ function truth_table_tf(elem)
     
     var table = document.getElementById("truth_table") ;
     
-        var title_row = table.insertRow(0) ;
-        var title_cell_1 = title_row.insertCell(0) ;
-        var title_cell_2 = title_row.insertCell(1) ;
-        var title_cell_3 = title_row.insertCell(2) ;
-        var title_cell_4 = title_row.insertCell(3) ;
+    var title_row = table.insertRow(0) ;
+    var title_cell_1 = title_row.insertCell(0) ;
+    var title_cell_2 = title_row.insertCell(1) ;
+    var title_cell_3 = title_row.insertCell(2) ;
+    var title_cell_4 = title_row.insertCell(3) ;
     
     
         if(elem.id == "qp_and")
@@ -156,14 +157,14 @@ function truth_table_tf(elem)
     
             for(i=0; i<4; i++)
             {
-            var row = table.insertRow(1) ;
-            var cell1 = row.insertCell(0) ;
-            var cell2 = row.insertCell(1) ;
-            var cell3 = row.insertCell(2) ;
-            
-            cell1.innerHTML = two_tf_value1[i];
-            cell2.innerHTML = two_tf_value2[i];
-            cell3.innerHTML = two_tf_value1[i] && two_tf_value2[i] ;
+                var row = table.insertRow(1) ;
+                var cell1 = row.insertCell(0) ;
+                var cell2 = row.insertCell(1) ;
+                var cell3 = row.insertCell(2) ;
+                
+                cell1.innerHTML = two_tf_value1[i];
+                cell2.innerHTML = two_tf_value2[i];
+                cell3.innerHTML = two_tf_value1[i] && two_tf_value2[i] ;
             }
         }
         
@@ -175,14 +176,14 @@ function truth_table_tf(elem)
     
             for(i=0; i<4; i++)
             {
-            var row = table.insertRow(1) ;
-            var cell1 = row.insertCell(0) ;
-            var cell2 = row.insertCell(1) ;
-            var cell3 = row.insertCell(2) ;
-            
-            cell1.innerHTML = two_tf_value1[i];
-            cell2.innerHTML = two_tf_value2[i];
-            cell3.innerHTML = two_tf_value1[i] || two_tf_value2[i] ;
+                var row = table.insertRow(1) ;
+                var cell1 = row.insertCell(0) ;
+                var cell2 = row.insertCell(1) ;
+                var cell3 = row.insertCell(2) ;
+                
+                cell1.innerHTML = two_tf_value1[i];
+                cell2.innerHTML = two_tf_value2[i];
+                cell3.innerHTML = two_tf_value1[i] || two_tf_value2[i] ;
             }
         }
         
@@ -195,16 +196,16 @@ function truth_table_tf(elem)
     
             for(i=0; i<8; i++)
             {
-            var row = table.insertRow(1) ;
-            var cell1 = row.insertCell(0) ;
-            var cell2 = row.insertCell(1) ;
-            var cell3 = row.insertCell(2) ;
-            var cell4 = row.insertCell(3) ;
-            
-            cell1.innerHTML = three_tf_value1[i];
-            cell2.innerHTML = three_tf_value2[i];
-            cell3.innerHTML = three_tf_value3[i];
-            cell4.innerHTML = three_tf_value1[i] && three_tf_value2[i] && three_tf_value3[i] ;
+                var row = table.insertRow(1) ;
+                var cell1 = row.insertCell(0) ;
+                var cell2 = row.insertCell(1) ;
+                var cell3 = row.insertCell(2) ;
+                var cell4 = row.insertCell(3) ;
+                
+                cell1.innerHTML = three_tf_value1[i];
+                cell2.innerHTML = three_tf_value2[i];
+                cell3.innerHTML = three_tf_value3[i];
+                cell4.innerHTML = three_tf_value1[i] && three_tf_value2[i] && three_tf_value3[i] ;
             }
         }
     
@@ -217,16 +218,16 @@ function truth_table_tf(elem)
     
             for(i=0; i<8; i++)
             {
-            var row = table.insertRow(1) ;
-            var cell1 = row.insertCell(0) ;
-            var cell2 = row.insertCell(1) ;
-            var cell3 = row.insertCell(2) ;
-            var cell4 = row.insertCell(3) ;
-            
-            cell1.innerHTML = three_tf_value1[i];
-            cell2.innerHTML = three_tf_value2[i];
-            cell3.innerHTML = three_tf_value3[i];
-            cell4.innerHTML = three_tf_value1[i] || three_tf_value2[i] || three_tf_value3[i] ;
+                var row = table.insertRow(1) ;
+                var cell1 = row.insertCell(0) ;
+                var cell2 = row.insertCell(1) ;
+                var cell3 = row.insertCell(2) ;
+                var cell4 = row.insertCell(3) ;
+                
+                cell1.innerHTML = three_tf_value1[i];
+                cell2.innerHTML = three_tf_value2[i];
+                cell3.innerHTML = three_tf_value3[i];
+                cell4.innerHTML = three_tf_value1[i] || three_tf_value2[i] || three_tf_value3[i] ;
             }
         }
     
@@ -239,24 +240,24 @@ function truth_table_tf(elem)
     
             for(i=0; i<8; i++)
             {
-            var row = table.insertRow(1) ;
-            var cell1 = row.insertCell(0) ;
-            var cell2 = row.insertCell(1) ;
-            var cell3 = row.insertCell(2) ;
-            var cell4 = row.insertCell(3) ;
-            
-            cell1.innerHTML = three_tf_value1[i];
-            cell2.innerHTML = three_tf_value2[i];
-            cell3.innerHTML = three_tf_value3[i];
-            cell4.innerHTML = three_tf_value1[i] && three_tf_value2[i] || three_tf_value3[i] ;
+                var row = table.insertRow(1) ;
+                var cell1 = row.insertCell(0) ;
+                var cell2 = row.insertCell(1) ;
+                var cell3 = row.insertCell(2) ;
+                var cell4 = row.insertCell(3) ;
+                
+                cell1.innerHTML = three_tf_value1[i];
+                cell2.innerHTML = three_tf_value2[i];
+                cell3.innerHTML = three_tf_value3[i];
+                cell4.innerHTML = three_tf_value1[i] && three_tf_value2[i] || three_tf_value3[i] ;
             }
         }
 }
 
 function remove_table()
 {
-    for(i=0; i<21; i++)
+    for(i=0; i<21; i++) // in here index's number is meaningless, it can be 99 or more just it will be fine at least greater than 8, cause 8 rows are maximum in here
     {
-    document.getElementById("truth_table").deleteRow(-1) ;
+        document.getElementById("truth_table").deleteRow(-1) ;
     }
 }

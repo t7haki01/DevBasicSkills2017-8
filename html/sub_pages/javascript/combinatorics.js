@@ -6,7 +6,7 @@ function factorial(x)
     {
         return 1 ;
     }
-    return x * factorial(x-1);
+        return x * factorial(x-1);
 }
 
 function combi()
@@ -40,6 +40,8 @@ function selection_com()
     document.getElementById("permutation_with_button").style.visibility = "visible" ;
     document.getElementById("permutation_without_button").style.visibility = "hidden" ;
     document.getElementById("permutation_with_button").style.visibility = "hidden" ;
+    document.getElementById("permutation_without_button").style.display = "none" ;
+    document.getElementById("permutation_with_button").style.display = "none" ;
     document.getElementById("combination_n").disabled = false ;
     document.getElementById("combination_r").disabled = false ;
     document.getElementById("permutation_n").disabled = true ;
@@ -62,4 +64,6 @@ function button_show()
     document.getElementById("combination_r").disabled = true ;
     document.getElementById("permutation_without_button").style.visibility = "visible" ;
     document.getElementById("permutation_with_button").style.visibility = "visible" ;
+    document.getElementById("permutation_without_button").style.display = "block" ;
+    document.getElementById("permutation_with_button").style.display = "block" ;
 }
