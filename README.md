@@ -6,9 +6,9 @@ Click the "index" to run the tool.
 
 User interface Design file is in the "Basic_user_interface_design" folder.
 
-Project report is in the "Document" forlder.
+Project report and Project plan are in the "Document" forlder.
 
-Plan and Work tracking is in the "Plan_schedule" folder.
+Work tracking is in the "Plan_schedule" folder.
 
 Test materials are in the "Beta_test" folder.
 
